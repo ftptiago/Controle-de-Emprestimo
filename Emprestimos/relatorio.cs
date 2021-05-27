@@ -39,7 +39,7 @@ namespace Emprestimos
                
                    // strSQL = "SELECT * FROM emprestimo WHERE `usuario` = @SEARCH%  OR `conferente` = @SEARCH% ";
                
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                  //ORDER BY id DESC
 
@@ -86,7 +86,7 @@ namespace Emprestimos
             try
             {
                
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "SELECT * FROM emprestimo WHERE `usuario` = '" + search.Text + "' OR `conferente` = '" + search.Text + "' ORDER BY id DESC";
                 //ORDER BY id DESC

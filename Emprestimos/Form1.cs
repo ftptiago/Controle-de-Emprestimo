@@ -53,7 +53,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "SELECT * FROM item WHERE status = 0 ";
                 dapter = new MySqlDataAdapter(strSQL, connect);
@@ -88,7 +88,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "SELECT * FROM emprestimo as E, item as I WHERE status = 1 AND E.item_id = I.id AND E.devolucao is null ";
                 dapter = new MySqlDataAdapter(strSQL, connect);
@@ -149,7 +149,7 @@ namespace Emprestimos
 
                     try
                     {
-                        connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                        connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                         strSQL = "UPDATE item SET status = @status WHERE id = @ID";
                         comm = new MySqlCommand(strSQL, connect);
@@ -180,7 +180,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "INSERT INTO `emprestimo`(`retirada`, `usuario`, `observacao`, `item_id`) VALUES (CURRENT_TIMESTAMP, @usuario, @observacao, @item_id)";
                 comm = new MySqlCommand(strSQL, connect);
@@ -244,7 +244,7 @@ namespace Emprestimos
                     string item_id = valores[0];
                     string val = returnIdItem(item_id);
 
-                    connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                    connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                     strSQL = "UPDATE item SET status = @status WHERE id = @ID";
                     comm = new MySqlCommand(strSQL, connect);
@@ -275,7 +275,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
                 connect.Open();                
                 strSQL = "SELECT item_id FROM emprestimo WHERE id = @ID";
                 comm = new MySqlCommand(strSQL, connect);
@@ -300,7 +300,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "UPDATE `emprestimo` SET `devolucao`= CURRENT_TIMESTAMP, `obsEntrega` = @obsEntrega, `conferente`= @conferente WHERE `id`= @ID";
                 comm = new MySqlCommand(strSQL, connect);

@@ -38,7 +38,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "INSERT INTO item (nome, tipo_item_id, descricao) VALUES (@nome, @tipo, @descricao)";
                 comm = new MySqlCommand(strSQL, connect);
@@ -73,7 +73,7 @@ namespace Emprestimos
         {
             try
             {
-                connect = new MySqlConnection(@"server=10.8.0.14;user id=server;password=@Crcpuc1234;database=emprestimos;");
+                connect = new MySqlConnection(@"server=127.0.0.1;user id=server;password=@1234;database=emprestimos;");
 
                 strSQL = "UPDATE item SET nome = @nome, tipo_item_id= @tipo, descricao = @descricao WHERE id = @ID";
                 comm = new MySqlCommand(strSQL, connect);
