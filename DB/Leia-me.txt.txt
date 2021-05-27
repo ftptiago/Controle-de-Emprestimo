@@ -1,0 +1,7 @@
+Este é um simples sistema de emprestimo em C#, o Banco de dados é MySQL.
+
+Para a utilizar é necessário alterar as configurações de conexão ao Banco de dados. 
+
+Att.: Fabrício Paixão
+
+Canal www.youtube.com/fabricioPaixao  
